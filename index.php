@@ -2,14 +2,43 @@
 
 require_once("config.php");
 
+//-------------Carrega todos os usuarios ------------------------
+
 // $sql = new Sql();
 
 // $usuarios = $sql->select("SELECT * FROM tb_usuarios");
 
-$root = new usuario();
 
-$root->loadById(1);
+//--------------- carrega um usuario ----------------------------
 
-echo $root;
+// $root = new usuario();
+// $root->loadById(1);
+// echo $root;
+
+
+//------------- Carrega uma lista de usuarios -------------------
+
+// $lista = usuario::getList();    // como é estatica pode ser chamada direta sem instanciar
+
+// echo json_encode($lista);
+
+
+
+//-------------- Carrega uma lista onde existe a ocorrencia da letra é no login -------------
+
+// $search = usuario::search("e");
+
+// echo json_encode($search);
+
+
+
+//-------------- Exibe dados quando a senha bate ocm o usuario --------------------------------
+
+$usuario = new usuario();
+
+$usuario->login("user", "12345");
+
+echo $usuario;
+
 
 ?>
