@@ -34,11 +34,31 @@ require_once("config.php");
 
 //-------------- Exibe dados quando a senha bate ocm o usuario --------------------------------
 
-$usuario = new usuario();
+// $usuario = new usuario();
 
-$usuario->login("user", "12345");
+// $usuario->login("user", "12345");
+
+// echo $usuario;
+
+
+//-------------- Insert de um usuario novo -------------------------------
+
+// $aluno = new usuario("root", "1234");
+
+// $aluno->insert();
+
+// echo $aluno;
+
+
+
+// Alterando um usuario na tabela
+
+$usuario =  new usuario();
+
+$usuario->loadById(8);
+
+$usuario->update("professor", "senha");
 
 echo $usuario;
-
 
 ?>
