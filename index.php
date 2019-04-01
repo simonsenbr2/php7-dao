@@ -51,7 +51,7 @@ require_once("config.php");
 
 
 
-// Alterando um usuario na tabela
+/* Alterando um usuario na tabela
 
 $usuario =  new usuario();
 
@@ -60,5 +60,19 @@ $usuario->loadById(8);
 $usuario->update("professor", "senha");
 
 echo $usuario;
+*/
+
+
+//   Apagando um usuario do banco
+
+
+$usuario =  new usuario();
+
+$usuario->loadById(5);
+
+$usuario->delete();
+
+echo $usuario;
+
 
 ?>
